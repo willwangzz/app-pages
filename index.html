@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhonetiKit 正音</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 600px;
+    width: 100%;
+    padding: 48px 24px;
+    text-align: center;
+  }
+  .icon {
+    width: 96px;
+    height: 96px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+  }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #6e6e73;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .card p {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .feature {
+    background: #f5f5f7;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: #424245;
+  }
+  .feature strong {
+    display: block;
+    color: #1d1d1f;
+    margin-bottom: 2px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .links a {
+    display: block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .links a.primary {
+    background: #1d1d1f;
+    color: #fff;
+  }
+  .links a.primary:hover {
+    background: #333;
+  }
+  .links a.secondary {
+    background: #fff;
+    color: #1d1d1f;
+    border: 1.5px solid #d2d2d7;
+  }
+  .links a.secondary:hover {
+    border-color: #1d1d1f;
+  }
+  footer {
+    margin-top: 48px;
+    color: #86868b;
+    font-size: 0.85rem;
+  }
+  @media (max-width: 480px) {
+    .features { grid-template-columns: 1fr; }
+    h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="icon">拼</div>
+  <h1>PhonetiKit 正音</h1>
+  <p class="subtitle">Contact Phonetic Names · 通讯录注音排序</p>
+
+  <div class="card">
+    <p>PhonetiKit helps you add and manage phonetic names for your contacts, so they sort and display correctly across all your devices.</p>
+    <div class="features">
+      <div class="feature">
+        <strong>Pinyin 拼音</strong>
+        Mandarin romanization
+      </div>
+      <div class="feature">
+        <strong>Privacy First</strong>
+        100% on-device
+      </div>
+      <div class="feature">
+        <strong>CJK Support</strong>
+        Chinese, Japanese, Korean
+      </div>
+      <div class="feature">
+        <strong>Batch Edit</strong>
+        Update all contacts at once
+      </div>
+    </div>
+  </div>
+
+  <div class="links">
+    <a href="privacy-policy.html" class="secondary">Privacy Policy · 隐私政策</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Zongzheng Wang</p>
+  </footer>
+</div>
+
+</body>
+</html>

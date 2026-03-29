@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — PhonetiKit 正音</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin-top: 8px;
+    color: #6e6e73;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  section p, section ul {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  section ul li {
+    margin-bottom: 6px;
+  }
+  .highlight {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 12px;
+  }
+  .highlight p {
+    color: #166534;
+    font-weight: 500;
+  }
+  footer {
+    text-align: center;
+    color: #86868b;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+  footer a {
+    color: #6e6e73;
+  }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>PhonetiKit 正音</h1>
+    <p id="subtitle-en">Privacy Policy</p>
+    <p id="subtitle-zh" class="hidden">隐私政策</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-zh" onclick="switchLang('zh')">中文</button>
+  </div>
+
+  <!-- English -->
+  <div id="lang-en">
+    <section>
+      <h2>Overview</h2>
+      <p>PhonetiKit 正音 is designed with your privacy as a core principle. The app helps you manage phonetic names for your contacts — and it does so entirely on your device.</p>
+      <div class="highlight">
+        <p>PhonetiKit does not collect, transmit, or share any personal data. Everything stays on your device.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contacts Access</h2>
+      <p>PhonetiKit requests access to your Contacts in order to read and update phonetic name fields. This access is:</p>
+      <ul>
+        <li><strong>Local only</strong> — contact data is read and written directly on your device</li>
+        <li><strong>Never transmitted</strong> — no contact information is sent to any server</li>
+        <li><strong>User-controlled</strong> — you can revoke access at any time in System Settings</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Collection</h2>
+      <p>PhonetiKit collects <strong>no data whatsoever</strong>. Specifically:</p>
+      <ul>
+        <li>No personal information is collected</li>
+        <li>No usage analytics or telemetry</li>
+        <li>No tracking or advertising identifiers</li>
+        <li>No third-party SDKs or services</li>
+        <li>No network requests are made by the app</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+      <p>All data processed by PhonetiKit resides in your device's local Contacts database, managed by the operating system. PhonetiKit does not maintain a separate database or store copies of your contacts.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>PhonetiKit does not collect any data from anyone, including children under 13. The app is safe for users of all ages.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this privacy policy is updated, the changes will be posted on this page with a revised date. Since the app collects no data, changes are expected to be minimal.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, please contact:</p>
+      <p style="margin-top:8px"><a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a></p>
+    </section>
+  </div>
+
+  <!-- Chinese -->
+  <div id="lang-zh" class="hidden">
+    <section>
+      <h2>概述</h2>
+      <p>PhonetiKit 正音以保护您的隐私为核心原则。本应用帮助您管理联系人的注音信息，所有操作均在您的设备上完成。</p>
+      <div class="highlight">
+        <p>PhonetiKit 不收集、不传输、不共享任何个人数据。一切信息均保留在您的设备上。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>通讯录访问</h2>
+      <p>PhonetiKit 需要访问您的通讯录以读取和更新联系人的注音字段。此访问权限：</p>
+      <ul>
+        <li><strong>仅限本地</strong> — 联系人数据仅在您的设备上读取和写入</li>
+        <li><strong>绝不传输</strong> — 任何联系人信息均不会发送到任何服务器</li>
+        <li><strong>用户可控</strong> — 您可以随时在系统设置中撤销访问权限</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>数据收集</h2>
+      <p>PhonetiKit <strong>不收集任何数据</strong>，具体包括：</p>
+      <ul>
+        <li>不收集任何个人信息</li>
+        <li>无使用分析或遥测</li>
+        <li>无跟踪或广告标识符</li>
+        <li>无第三方 SDK 或服务</li>
+        <li>应用不发起任何网络请求</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>数据存储</h2>
+      <p>PhonetiKit 处理的所有数据均存储在您设备本地的通讯录数据库中，由操作系统管理。PhonetiKit 不维护单独的数据库，也不存储联系人的副本。</p>
+    </section>
+
+    <section>
+      <h2>儿童隐私</h2>
+      <p>PhonetiKit 不收集任何人的数据，包括 13 岁以下儿童。本应用适合所有年龄段的用户使用。</p>
+    </section>
+
+    <section>
+      <h2>政策变更</h2>
+      <p>如本隐私政策有更新，修改内容将在此页面发布并注明更新日期。由于本应用不收集任何数据，预计变更将非常少。</p>
+    </section>
+
+    <section>
+      <h2>联系方式</h2>
+      <p>如果您对本隐私政策有任何疑问，请通过以下方式联系：</p>
+      <p style="margin-top:8px"><a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>Last updated: March 2026 · 最后更新：2026 年 3 月</p>
+    <p style="margin-top:8px"><a href="index.html">← Back to Home</a></p>
+  </footer>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('lang-zh').classList.toggle('hidden', lang !== 'zh');
+  document.getElementById('subtitle-en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('subtitle-zh').classList.toggle('hidden', lang !== 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+}
+</script>
+
+</body>
+</html>
