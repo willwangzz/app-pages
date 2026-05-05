@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — SendEveryone</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin-top: 8px;
+    color: #6e6e73;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  p, li {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .last-updated {
+    text-align: center;
+    color: #8e8e93;
+    font-size: 0.85rem;
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>SendEveryone</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="active" onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('zh')">中文</button>
+  </div>
+
+  <div id="en">
+    <section>
+      <h2>Overview</h2>
+      <p>SendEveryone respects your privacy. This app does not collect, store, or transmit any personal data to external servers.</p>
+    </section>
+
+    <section>
+      <h2>Contacts Access</h2>
+      <p>SendEveryone requests access to your contacts solely to let you select recipients for group messages and emails. Your contacts data:</p>
+      <ul>
+        <li>Is accessed only on your device</li>
+        <li>Is never uploaded or sent to any server</li>
+        <li>Is not stored by the app beyond the current session</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Message Sending</h2>
+      <p>Messages and emails are sent through your device's native system APIs (Message Framework, Mail). SendEveryone does not intercept, read, or store the content of any messages you send.</p>
+    </section>
+
+    <section>
+      <h2>Data Collection</h2>
+      <p>SendEveryone does <strong>not</strong> collect any data. There are no analytics, tracking, or third-party services.</p>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>This app does not integrate with any third-party services or SDKs.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, please contact us at <a href="mailto:willwangzz@outlook.com">willwangzz@outlook.com</a>.</p>
+    </section>
+  </div>
+
+  <div id="zh" style="display:none;">
+    <section>
+      <h2>概述</h2>
+      <p>SendEveryone 尊重您的隐私。本应用不会收集、存储或向外部服务器传输任何个人数据。</p>
+    </section>
+
+    <section>
+      <h2>通讯录访问</h2>
+      <p>SendEveryone 请求访问您的通讯录，仅用于选择群发消息和邮件的收件人。您的通讯录数据：</p>
+      <ul>
+        <li>仅在您的设备上访问</li>
+        <li>绝不会上传或发送至任何服务器</li>
+        <li>应用不会在当前会话之外存储这些数据</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>消息发送</h2>
+      <p>消息和邮件通过设备原生系统 API（Message Framework、Mail）发送。SendEveryone 不会拦截、读取或存储您发送的任何消息内容。</p>
+    </section>
+
+    <section>
+      <h2>数据收集</h2>
+      <p>SendEveryone <strong>不</strong>收集任何数据。没有分析、追踪或第三方服务。</p>
+    </section>
+
+    <section>
+      <h2>第三方服务</h2>
+      <p>本应用不集成任何第三方服务或 SDK。</p>
+    </section>
+
+    <section>
+      <h2>联系我们</h2>
+      <p>如果您对本隐私政策有任何疑问，请联系 <a href="mailto:willwangzz@outlook.com">willwangzz@outlook.com</a>。</p>
+    </section>
+  </div>
+
+  <p class="last-updated">Last updated: May 5, 2026</p>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  document.getElementById('zh').style.display = lang === 'zh' ? 'block' : 'none';
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-toggle button:nth-child(${lang === 'en' ? 1 : 2})`).classList.add('active');
+}
+</script>
+</body>
+</html>
