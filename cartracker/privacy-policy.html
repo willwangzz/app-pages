@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — CarTracker</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin-top: 8px;
+    color: #6e6e73;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  p, li {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .last-updated {
+    text-align: center;
+    color: #8e8e93;
+    font-size: 0.85rem;
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>CarTracker — vehicle logbook</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="active" onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('zh')">中文</button>
+  </div>
+
+  <div id="en">
+    <section>
+      <h2>Overview</h2>
+      <p>CarTracker helps you keep a vehicle logbook: odometer readings, trips, and reports. Everything you enter stays on your device and in your own iCloud account. The developer has no servers and cannot see your data.</p>
+    </section>
+
+    <section>
+      <h2>What the app stores</h2>
+      <ul>
+        <li>Vehicles you add (make, model, year, plate)</li>
+        <li>Odometer readings with date and time, notes and trip purpose</li>
+        <li>Odometer photos you take or pick</li>
+        <li>The location where a reading was recorded, and the parking spots you save</li>
+        <li>Reminder times you set</li>
+      </ul>
+      <p>This data is stored on your device. If iCloud is enabled, it is synced through your private iCloud database (Apple CloudKit) so your other devices can see it. Only you can access that database.</p>
+    </section>
+
+    <section>
+      <h2>Camera and photos</h2>
+      <p>The camera and photo library are used only to capture odometer photos. Reading the number from the photo (text recognition) happens on your device.</p>
+    </section>
+
+    <section>
+      <h2>Location</h2>
+      <p>Location is used only while the app is open, to record where a reading was taken and to match saved parking spots. To show a place name, coordinates are sent to Apple's geocoding service. Maps are displayed with Apple Maps. The app does not track your location in the background.</p>
+    </section>
+
+    <section>
+      <h2>Notifications</h2>
+      <p>Reminders are local notifications scheduled on your device. No push messages are sent by the developer.</p>
+    </section>
+
+    <section>
+      <h2>Exports and backups</h2>
+      <p>CSV, PDF and backup files are created only when you ask for them, and are shared only to the destination you choose.</p>
+    </section>
+
+    <section>
+      <h2>No tracking</h2>
+      <p>CarTracker has no analytics, advertising, tracking or third-party SDKs. Your data is never sold or shared with third parties.</p>
+    </section>
+
+    <section>
+      <h2>Deleting your data</h2>
+      <p>You can delete any record, or all data, in the app (Settings › Data management). Deleting the app removes local data; data in iCloud can also be removed in iOS Settings › [your name] › iCloud › Manage Storage.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>If this policy changes, the updated version will be posted on this page with a new date.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a></p>
+    </section>
+  </div>
+
+  <div id="zh" style="display:none;">
+    <section>
+      <h2>概述</h2>
+      <p>CarTracker 用来记录车辆里程日志：里程表读数、行程和报告。你输入的所有数据只保存在你的设备和你自己的 iCloud 账户里。开发者没有任何服务器，也看不到你的数据。</p>
+    </section>
+
+    <section>
+      <h2>应用保存的数据</h2>
+      <ul>
+        <li>你添加的车辆（品牌、型号、年份、车牌）</li>
+        <li>里程表读数及日期时间、备注和行程目的</li>
+        <li>你拍摄或选择的里程表照片</li>
+        <li>记录读数时的位置，以及你保存的停车场</li>
+        <li>你设置的提醒时间</li>
+      </ul>
+      <p>这些数据保存在你的设备上。如果开启了 iCloud，会通过你的私有 iCloud 数据库（Apple CloudKit）同步到你的其他设备。只有你本人能访问这个数据库。</p>
+    </section>
+
+    <section>
+      <h2>相机和照片</h2>
+      <p>相机和相册只用于拍摄里程表照片。从照片中识别读数（文字识别）在你的设备上完成。</p>
+    </section>
+
+    <section>
+      <h2>位置</h2>
+      <p>只在 App 打开时使用位置，用于记录读数的地点和匹配已保存的停车场。显示地名时，坐标会发送给 Apple 的地理编码服务。地图由 Apple 地图显示。App 不会在后台追踪你的位置。</p>
+    </section>
+
+    <section>
+      <h2>通知</h2>
+      <p>提醒是在你设备上设定的本地通知，开发者不会发送任何推送消息。</p>
+    </section>
+
+    <section>
+      <h2>导出和备份</h2>
+      <p>CSV、PDF 和备份文件只在你主动导出时生成，并且只发送到你选择的位置。</p>
+    </section>
+
+    <section>
+      <h2>不追踪</h2>
+      <p>CarTracker 不包含任何统计分析、广告、追踪或第三方 SDK。你的数据不会被出售，也不会与第三方共享。</p>
+    </section>
+
+    <section>
+      <h2>删除数据</h2>
+      <p>你可以在 App 里删除任意记录或全部数据（设置 › 数据管理）。删除 App 会清除本地数据；iCloud 里的数据也可以在 iOS 设置 › [你的名字] › iCloud › 管理储存空间 中删除。</p>
+    </section>
+
+    <section>
+      <h2>政策变更</h2>
+      <p>如果本政策有变更，更新后的版本会发布在本页面，并标注新的日期。</p>
+    </section>
+
+    <section>
+      <h2>联系我们</h2>
+      <p>如对本政策有疑问，请联系 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a></p>
+    </section>
+  </div>
+
+  <p class="last-updated">Last updated: October 6, 2026</p>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  document.getElementById('zh').style.display = lang === 'zh' ? 'block' : 'none';
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-toggle button:nth-child(${lang === 'en' ? 1 : 2})`).classList.add('active');
+}
+</script>
+</body>
+</html>
