@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SendEveryone</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header img {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin-top: 8px;
+    color: #6e6e73;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  section p, section ul {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  section ul li {
+    margin-bottom: 6px;
+  }
+  .highlight {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 12px;
+  }
+  .highlight p {
+    color: #166534;
+    font-weight: 500;
+  }
+  footer {
+    text-align: center;
+    color: #86868b;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+  footer a {
+    color: #6e6e73;
+  }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <img src="icon.png" alt="SendEveryone icon">
+    <h1>SendEveryone</h1>
+    <p id="subtitle-en">Text or email a group in one tap</p>
+    <p id="subtitle-zh" class="hidden">一键群发短信和邮件</p>
+    <p id="subtitle-ja" class="hidden">ワンタップでグループにメッセージ・メール</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-zh" onclick="switchLang('zh')">中文</button>
+    <button id="btn-ja" onclick="switchLang('ja')">日本語</button>
+  </div>
+
+  <div id="lang-en">
+    <section>
+      <h2>What it does</h2>
+      <p>Pick contacts once, save them as a group, and send an SMS, iMessage or email to everyone in one tap. Messages go through Apple’s own Messages and Mail compose screens — you always review before sending.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Quick select</strong> — tick phone numbers or emails straight from your contacts, with A–Z index and pinyin search for Chinese names</li>
+        <li><strong>Groups</strong> — save recipients as reusable groups, or add them to an existing group (duplicates are skipped)</li>
+        <li><strong>Default send type</strong> — each group sends as Message or Email; long-press Send to use the other one</li>
+        <li><strong>Email To / Cc / Bcc</strong> — choose how each address is included</li>
+        <li><strong>Limited contacts access</strong> — works even if you only share some contacts</li>
+      </ul>
+      <p style="margin-top: 12px;">Available for iPhone and iPad. The Apple Watch app has been retired as of version 3.0.</p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <div class="highlight">
+        <p>Everything stays on your device. No data is collected, uploaded or shared.</p>
+      </div>
+      <p style="margin-top: 12px;">Read the full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+      <p><strong>Why do I need to tap Send in Messages?</strong><br>iOS doesn’t allow apps to send texts silently. SendEveryone fills in the recipients; you write the message and send it yourself.</p>
+      <p></p>
+      <p><strong>My groups from the old version are gone.</strong><br>Version 3.0 is a complete rewrite with a new storage format, so groups from version 2.x could not be carried over. Please recreate them — it only takes a few taps.</p>
+      <p></p>
+      <p><strong>Will recipients see each other?</strong><br>A group SMS/iMessage shows all recipients to everyone. For email, put recipients in Bcc to keep addresses private.</p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Questions or feedback? Email <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>.</p>
+    </section>
+  </div>
+
+  <div id="lang-zh" class="hidden">
+    <section>
+      <h2>它能做什么</h2>
+      <p>选好联系人存成群组，一键给所有人发短信、iMessage 或邮件。发送使用苹果自带的信息和邮件界面，发出前你都能检查确认。</p>
+    </section>
+
+    <section>
+      <h2>功能</h2>
+      <ul>
+        <li><strong>快速选择</strong> — 直接从通讯录勾选电话或邮箱，支持 A–Z 索引和中文拼音搜索</li>
+        <li><strong>群组</strong> — 保存为可重复使用的群组，或加入已有群组（自动跳过重复）</li>
+        <li><strong>默认发送方式</strong> — 每个群组可设为短信或邮件，长按发送按钮可改用另一种</li>
+        <li><strong>邮件收件人 / 抄送 / 密送</strong> — 每个邮箱可单独设置</li>
+        <li><strong>部分联系人授权</strong> — 只授权部分联系人也能正常使用</li>
+      </ul>
+      <p style="margin-top: 12px;">支持 iPhone 和 iPad。从 3.0 版起不再提供 Apple Watch 应用。</p>
+    </section>
+
+    <section>
+      <h2>隐私</h2>
+      <div class="highlight">
+        <p>所有数据都保存在你的设备上，不收集、不上传、不分享。</p>
+      </div>
+      <p style="margin-top: 12px;">查看完整的<a href="privacy-policy.html">隐私政策</a>。</p>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <p><strong>为什么还要在信息里点发送？</strong><br>iOS 不允许 App 在后台直接发短信。SendEveryone 帮你填好收件人，内容由你编写并亲自发送。</p>
+      <p></p>
+      <p><strong>旧版本的群组不见了？</strong><br>3.0 是全新重写的版本，数据格式不同，2.x 的群组无法迁移，需要重新创建。</p>
+      <p></p>
+      <p><strong>收件人能看到彼此吗？</strong><br>群发短信/iMessage 时所有收件人互相可见。发邮件时可以把收件人设为密送（Bcc）来保护地址。</p>
+    </section>
+
+    <section>
+      <h2>支持</h2>
+      <p>有问题或建议？请发邮件至 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>。</p>
+    </section>
+  </div>
+
+  <div id="lang-ja" class="hidden">
+    <section>
+      <h2>概要</h2>
+      <p>連絡先を選んでグループとして保存し、SMS・iMessage・メールをワンタップで全員に送信できます。送信は Apple 標準のメッセージ／メール画面を使うため、送信前に必ず内容を確認できます。</p>
+    </section>
+
+    <section>
+      <h2>機能</h2>
+      <ul>
+        <li><strong>クイック選択</strong> — 連絡先から電話番号やメールを直接選択。A–Z インデックスと検索に対応</li>
+        <li><strong>グループ</strong> — 宛先をグループとして保存、既存グループへの追加も可能（重複は自動でスキップ）</li>
+        <li><strong>デフォルトの送信方法</strong> — グループごとにメッセージかメールを設定。送信ボタンの長押しでもう一方を使用</li>
+        <li><strong>メールの To / Cc / Bcc</strong> — アドレスごとに設定可能</li>
+        <li><strong>連絡先の限定アクセス</strong> — 一部の連絡先のみ許可していても利用可能</li>
+      </ul>
+      <p style="margin-top: 12px;">iPhone と iPad に対応。バージョン 3.0 より Apple Watch アプリは提供を終了しました。</p>
+    </section>
+
+    <section>
+      <h2>プライバシー</h2>
+      <div class="highlight">
+        <p>すべてのデータはお使いのデバイス内に保存されます。データの収集・送信・共有は一切行いません。</p>
+      </div>
+      <p style="margin-top: 12px;"><a href="privacy-policy.html">プライバシーポリシー</a>の全文はこちら。</p>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+      <p><strong>なぜメッセージ画面で送信をタップする必要があるのですか？</strong><br>iOS ではアプリが自動でメッセージを送信することはできません。SendEveryone は宛先を入力し、本文の作成と送信はご自身で行います。</p>
+      <p></p>
+      <p><strong>旧バージョンのグループが消えました。</strong><br>3.0 は全面的に作り直したバージョンで保存形式が異なるため、2.x のグループは引き継げません。お手数ですが再作成してください。</p>
+      <p></p>
+      <p><strong>受信者同士はお互いが見えますか？</strong><br>グループ SMS／iMessage では全員が表示されます。メールの場合は Bcc を使うとアドレスを非公開にできます。</p>
+    </section>
+
+    <section>
+      <h2>サポート</h2>
+      <p>ご質問・ご意見は <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a> までお送りください。</p>
+    </section>
+  </div>
+
+  <footer>
+    <p><a href="privacy-policy.html">Privacy Policy · 隐私政策 · プライバシーポリシー</a></p>
+    <p style="margin-top: 4px;">&copy; 2026 Zongzheng Wang</p>
+  </footer>
+</div>
+
+<script>
+const LANGS = ['en', 'zh', 'ja'];
+function switchLang(lang) {
+  for (const l of LANGS) {
+    const on = l === lang;
+    document.getElementById('lang-' + l).classList.toggle('hidden', !on);
+    document.getElementById('subtitle-' + l).classList.toggle('hidden', !on);
+    document.getElementById('btn-' + l).classList.toggle('active', on);
+  }
+  document.documentElement.lang = { en: 'en', zh: 'zh-Hans', ja: 'ja' }[lang];
+}
+const nav = (navigator.language || '').toLowerCase();
+if (nav.startsWith('zh')) switchLang('zh');
+else if (nav.startsWith('ja')) switchLang('ja');
+</script>
+
+</body>
+</html>
