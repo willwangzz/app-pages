@@ -11,155 +11,204 @@
     line-height: 1.7;
     color: #1d1d1f;
     background: #f5f5f7;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .container {
-    max-width: 600px;
-    width: 100%;
-    padding: 48px 24px;
-    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
   }
-  .icon {
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header img {
     width: 96px;
     height: 96px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 24px;
-    box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
   }
-  h1 {
-    font-size: 2.2rem;
+  header h1 {
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: 8px;
   }
-  .subtitle {
+  header p {
+    margin-top: 8px;
     color: #6e6e73;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 40px;
   }
-  .card {
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
     background: #fff;
     border-radius: 16px;
     padding: 32px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     margin-bottom: 24px;
-    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  .card p {
+  section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  section p, section ul {
     color: #424245;
     font-size: 0.95rem;
   }
-  .features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 16px;
+  section ul {
+    padding-left: 20px;
+    margin-top: 8px;
   }
-  .feature {
-    background: #f5f5f7;
-    border-radius: 10px;
-    padding: 14px 16px;
-    font-size: 0.88rem;
-    color: #424245;
+  section ul li {
+    margin-bottom: 6px;
   }
-  .feature strong {
-    display: block;
-    color: #1d1d1f;
-    margin-bottom: 2px;
+  .highlight {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 12px;
   }
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 32px;
-  }
-  .links a {
-    display: block;
-    padding: 14px 24px;
-    border-radius: 12px;
-    font-size: 0.95rem;
+  .highlight p {
+    color: #166534;
     font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .links a.primary {
-    background: #1d1d1f;
-    color: #fff;
-  }
-  .links a.primary:hover {
-    background: #333;
-  }
-  .links a.secondary {
-    background: #fff;
-    color: #1d1d1f;
-    border: 1.5px solid #d2d2d7;
-  }
-  .links a.secondary:hover {
-    border-color: #1d1d1f;
   }
   footer {
-    margin-top: 48px;
+    text-align: center;
     color: #86868b;
     font-size: 0.85rem;
+    margin-top: 48px;
   }
-  @media (max-width: 480px) {
-    .features { grid-template-columns: 1fr; }
-    h1 { font-size: 1.8rem; }
+  footer a {
+    color: #6e6e73;
   }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="icon">拼</div>
-  <h1>PhonetiKit 正音</h1>
-  <p class="subtitle">Chinese Contact Pinyin · 中文联系人拼音工具</p>
+  <header>
+    <img src="icon.png" alt="PhonetiKit icon">
+    <h1>PhonetiKit 正音</h1>
+    <p id="subtitle-en">Fix Chinese contact sorting</p>
+    <p id="subtitle-zh" class="hidden">让中文联系人按拼音正确排序</p>
+  </header>
 
-  <div class="card">
-    <p>PhonetiKit adds Mandarin pinyin to your Chinese contact names, so they sort and display correctly across all your Apple devices.</p>
-    <div class="features">
-      <div class="feature">
-        <strong>Chinese Pinyin</strong>
-        Add Mandarin pinyin to contact names
-      </div>
-      <div class="feature">
-        <strong>Privacy First</strong>
-        100% on-device processing
-      </div>
-      <div class="feature">
-        <strong>Batch Edit</strong>
-        Update all contacts at once
-      </div>
-      <div class="feature">
-        <strong>Smart Scan</strong>
-        Auto-detect contacts needing pinyin
-      </div>
-    </div>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-zh" onclick="switchLang('zh')">中文</button>
   </div>
 
-  <div class="links">
-    <a href="privacy-policy.html" class="secondary">Privacy Policy · 隐私政策</a>
+  <!-- English -->
+  <div id="lang-en">
+    <section>
+      <h2>What it does</h2>
+      <p>When your device language isn't Chinese, Chinese contacts lose their A–Z order and all end up under "#". PhonetiKit adds Mandarin pinyin to their phonetic name fields, so they sort correctly in Contacts, Phone and Messages across your Apple devices.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Smart scan</strong> — finds Chinese contacts that are missing pinyin</li>
+        <li><strong>Preview first</strong> — review every change before anything is written</li>
+        <li><strong>Polyphonic characters</strong> — flags characters with more than one reading (曾, 单, 柏…) and suggests the right one</li>
+        <li><strong>Phonetic audit</strong> — browse, search and edit pinyin you already have</li>
+        <li><strong>Company names</strong> — handles contacts that only have an organization</li>
+      </ul>
+      <p style="margin-top: 12px;">Available for iPhone, iPad and Mac. Optimized for iPhone Duo.</p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <div class="highlight">
+        <p>Everything happens on your device. No data is collected, uploaded or shared.</p>
+      </div>
+      <p style="margin-top: 12px;">Read the full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Questions or feedback? Email <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>.</p>
+    </section>
   </div>
 
-  <div class="card" style="text-align: center;">
-    <p style="font-weight: 600; color: #1d1d1f; margin-bottom: 8px;">Support & Contact</p>
-    <p>Questions or feedback? Reach out at <a href="mailto:zongzheng_app@icloud.com" style="color: #667eea; text-decoration: none;">zongzheng_app@icloud.com</a></p>
-    <p style="margin-top: 8px;"><a href="privacy-policy.html" style="color: #667eea; text-decoration: none;">Privacy Policy · 隐私政策</a></p>
+  <!-- 中文 -->
+  <div id="lang-zh" class="hidden">
+    <section>
+      <h2>它能做什么</h2>
+      <p>当设备语言不是中文时，中文联系人会失去 A–Z 排序，全部挤到「#」下面。正音为这些联系人的注音字段添加普通话拼音，让它们在你所有 Apple 设备的通讯录、电话和信息里都能正确排序。</p>
+    </section>
+
+    <section>
+      <h2>功能</h2>
+      <ul>
+        <li><strong>智能扫描</strong> — 找出缺少拼音的中文联系人</li>
+        <li><strong>先预览再写入</strong> — 每一项修改都可以先检查确认</li>
+        <li><strong>多音字识别</strong> — 标出有多个读音的字（曾、单、柏……），并推荐正确读音</li>
+        <li><strong>审查拼音</strong> — 浏览、搜索并修改已有的拼音</li>
+        <li><strong>公司联系人</strong> — 支持只有公司名的联系人</li>
+      </ul>
+      <p style="margin-top: 12px;">支持 iPhone、iPad 和 Mac，已适配 iPhone Duo。</p>
+    </section>
+
+    <section>
+      <h2>隐私</h2>
+      <div class="highlight">
+        <p>所有处理都在你的设备上完成，不收集、不上传、不分享任何数据。</p>
+      </div>
+      <p style="margin-top: 12px;">查看完整的<a href="privacy-policy.html">隐私政策</a>。</p>
+    </section>
+
+    <section>
+      <h2>支持</h2>
+      <p>有问题或建议？请发邮件至 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>。</p>
+    </section>
   </div>
 
   <footer>
-    <p>&copy; 2026 Zongzheng Wang</p>
+    <p><a href="privacy-policy.html">Privacy Policy · 隐私政策</a></p>
+    <p style="margin-top: 4px;">&copy; 2026 Zongzheng Wang</p>
   </footer>
 </div>
+
+<script>
+function switchLang(lang) {
+  const en = lang === 'en';
+  document.getElementById('lang-en').classList.toggle('hidden', !en);
+  document.getElementById('lang-zh').classList.toggle('hidden', en);
+  document.getElementById('subtitle-en').classList.toggle('hidden', !en);
+  document.getElementById('subtitle-zh').classList.toggle('hidden', en);
+  document.getElementById('btn-en').classList.toggle('active', en);
+  document.getElementById('btn-zh').classList.toggle('active', !en);
+  document.documentElement.lang = en ? 'en' : 'zh-Hans';
+}
+if ((navigator.language || '').toLowerCase().startsWith('zh')) switchLang('zh');
+</script>
 
 </body>
 </html>
