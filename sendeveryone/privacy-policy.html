@@ -88,7 +88,7 @@
 <div class="container">
   <header>
     <h1>Privacy Policy</h1>
-    <p>SendEveryone</p>
+    <p id="app-name">SendEveryone</p>
   </header>
 
   <div class="lang-toggle">
@@ -232,7 +232,9 @@
 <script>
 const LANGS = ['en', 'hans', 'hant', 'ja'];
 const HTML_LANG = { en: 'en', hans: 'zh-Hans', hant: 'zh-Hant', ja: 'ja' };
+const NAMES = { en: 'SendEveryone', hans: '简单群发', hant: '簡單群發', ja: '一斉送信' };
 function switchLang(lang) {
+  document.getElementById('app-name').textContent = NAMES[lang];
   for (const l of LANGS) {
     document.getElementById('lang-' + l).style.display = l === lang ? 'block' : 'none';
     document.getElementById('btn-' + l).classList.toggle('active', l === lang);
