@@ -306,7 +306,7 @@
 const LANGS = ['en', 'hans', 'hant', 'ja'];
 const HTML_LANG = { en: 'en', hans: 'zh-Hans', hant: 'zh-Hant', ja: 'ja' };
 // App Store name per language
-const NAMES = { en: 'SendEveryone', hans: '简单群发', hant: '簡單群發', ja: '一斉送信' };
+const NAMES = { en: 'SendEveryone', hans: '简单群发', hant: '簡單群發', ja: '一斉送信 - SendEveryone' };
 function switchLang(lang) {
   document.getElementById('app-name').textContent = NAMES[lang];
   document.title = NAMES[lang] + (lang === 'en' ? ' — Support' : ' — SendEveryone');
