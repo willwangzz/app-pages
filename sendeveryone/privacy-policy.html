@@ -92,94 +92,161 @@
   </header>
 
   <div class="lang-toggle">
-    <button class="active" onclick="switchLang('en')">English</button>
-    <button onclick="switchLang('zh')">中文</button>
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-hans" onclick="switchLang('hans')">简体中文</button>
+    <button id="btn-hant" onclick="switchLang('hant')">繁體中文</button>
+    <button id="btn-ja" onclick="switchLang('ja')">日本語</button>
   </div>
 
-  <div id="en">
+  <div id="lang-en" lang="en">
     <section>
       <h2>Overview</h2>
-      <p>SendEveryone respects your privacy. This app does not collect, store, or transmit any personal data to external servers.</p>
+      <p>SendEveryone respects your privacy. The developer does not collect, receive or have access to any of your data.</p>
     </section>
 
     <section>
       <h2>Contacts Access</h2>
-      <p>SendEveryone requests access to your contacts solely to let you select recipients for group messages and emails. Your contacts data:</p>
-      <ul>
-        <li>Is accessed only on your device</li>
-        <li>Is never uploaded or sent to any server</li>
-        <li>Is not stored by the app beyond the current session</li>
-      </ul>
+      <p>SendEveryone reads your contacts only so you can pick recipients. Contacts are read on your device and are never sent to the developer or any third party.</p>
+    </section>
+
+    <section>
+      <h2>Groups and iCloud</h2>
+      <p>When you send or save a group, the names, phone numbers and email addresses in it are saved in the app on your device. If iCloud is turned on, they also sync through your own private iCloud account so your groups appear on your other devices. This data is stored by Apple under your Apple Account; the developer cannot see it. Deleting a group or the app removes it.</p>
     </section>
 
     <section>
       <h2>Message Sending</h2>
-      <p>Messages and emails are sent through your device's native system APIs (Message Framework, Mail). SendEveryone does not intercept, read, or store the content of any messages you send.</p>
+      <p>Messages and emails are composed and sent with Apple’s own Messages and Mail screens. SendEveryone does not read or store what you write.</p>
     </section>
 
     <section>
       <h2>Data Collection</h2>
-      <p>SendEveryone does <strong>not</strong> collect any data. There are no analytics, tracking, or third-party services.</p>
-    </section>
-
-    <section>
-      <h2>Third-Party Services</h2>
-      <p>This app does not integrate with any third-party services or SDKs.</p>
+      <p>SendEveryone does <strong>not</strong> collect any data. There are no analytics, tracking, ads or third-party SDKs.</p>
     </section>
 
     <section>
       <h2>Contact</h2>
-      <p>If you have questions about this privacy policy, please contact us at <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>.</p>
+      <p>Questions about this policy? Email <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>.</p>
     </section>
   </div>
 
-  <div id="zh" style="display:none;">
+  <div id="lang-hans" lang="zh-Hans" style="display:none;">
     <section>
       <h2>概述</h2>
-      <p>SendEveryone 尊重您的隐私。本应用不会收集、存储或向外部服务器传输任何个人数据。</p>
+      <p>SendEveryone 尊重您的隐私。开发者不会收集、接收或访问您的任何数据。</p>
     </section>
 
     <section>
       <h2>通讯录访问</h2>
-      <p>SendEveryone 请求访问您的通讯录，仅用于选择群发消息和邮件的收件人。您的通讯录数据：</p>
-      <ul>
-        <li>仅在您的设备上访问</li>
-        <li>绝不会上传或发送至任何服务器</li>
-        <li>应用不会在当前会话之外存储这些数据</li>
-      </ul>
+      <p>SendEveryone 读取通讯录只是为了让您选择收件人。通讯录只在您的设备上读取，绝不会发送给开发者或任何第三方。</p>
+    </section>
+
+    <section>
+      <h2>群组与 iCloud</h2>
+      <p>发送或保存群组时，群组里的姓名、电话号码和邮箱会保存在您设备上的 App 中。如果开启了 iCloud，这些数据还会通过您自己的私有 iCloud 同步到您的其他设备。这些数据由苹果保存在您的 Apple 账户下，开发者无法看到。删除群组或 App 即可删除这些数据。</p>
     </section>
 
     <section>
       <h2>消息发送</h2>
-      <p>消息和邮件通过设备原生系统 API（Message Framework、Mail）发送。SendEveryone 不会拦截、读取或存储您发送的任何消息内容。</p>
+      <p>消息和邮件通过苹果自带的信息和邮件界面编写和发送。SendEveryone 不会读取或保存您写的内容。</p>
     </section>
 
     <section>
       <h2>数据收集</h2>
-      <p>SendEveryone <strong>不</strong>收集任何数据。没有分析、追踪或第三方服务。</p>
-    </section>
-
-    <section>
-      <h2>第三方服务</h2>
-      <p>本应用不集成任何第三方服务或 SDK。</p>
+      <p>SendEveryone <strong>不</strong>收集任何数据。没有分析、追踪、广告或第三方 SDK。</p>
     </section>
 
     <section>
       <h2>联系我们</h2>
-      <p>如果您对本隐私政策有任何疑问，请联系 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>。</p>
+      <p>对本政策有疑问？请发邮件至 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>。</p>
     </section>
   </div>
 
-  <p class="last-updated">Last updated: October 27, 2026</p>
+  <div id="lang-hant" lang="zh-Hant" style="display:none;">
+    <section>
+      <h2>概述</h2>
+      <p>SendEveryone 尊重您的隱私。開發者不會收集、接收或存取您的任何資料。</p>
+    </section>
+
+    <section>
+      <h2>聯絡人存取</h2>
+      <p>SendEveryone 讀取聯絡人只是為了讓您選擇收件人。聯絡人只在您的裝置上讀取，絕不會傳送給開發者或任何第三方。</p>
+    </section>
+
+    <section>
+      <h2>群組與 iCloud</h2>
+      <p>傳送或儲存群組時，群組中的姓名、電話號碼和電子郵件地址會儲存在您裝置上的 App 中。如果開啟了 iCloud，這些資料還會透過您自己的私人 iCloud 同步到您的其他裝置。這些資料由 Apple 儲存在您的 Apple 帳號下，開發者無法看到。刪除群組或 App 即可刪除這些資料。</p>
+    </section>
+
+    <section>
+      <h2>訊息傳送</h2>
+      <p>訊息和郵件透過 Apple 內建的訊息和郵件畫面撰寫和傳送。SendEveryone 不會讀取或儲存您寫的內容。</p>
+    </section>
+
+    <section>
+      <h2>資料收集</h2>
+      <p>SendEveryone <strong>不</strong>收集任何資料。沒有分析、追蹤、廣告或第三方 SDK。</p>
+    </section>
+
+    <section>
+      <h2>聯絡我們</h2>
+      <p>對本政策有疑問？請寄信至 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>。</p>
+    </section>
+  </div>
+
+  <div id="lang-ja" lang="ja" style="display:none;">
+    <section>
+      <h2>概要</h2>
+      <p>SendEveryone はお客様のプライバシーを尊重します。開発者がお客様のデータを収集・受信・閲覧することはありません。</p>
+    </section>
+
+    <section>
+      <h2>連絡先へのアクセス</h2>
+      <p>SendEveryone が連絡先を読み取るのは、宛先を選んでいただくためだけです。連絡先はデバイス上でのみ読み取られ、開発者や第三者に送信されることはありません。</p>
+    </section>
+
+    <section>
+      <h2>グループと iCloud</h2>
+      <p>グループを送信または保存すると、そのグループの名前・電話番号・メールアドレスがデバイス上のアプリに保存されます。iCloud がオンの場合は、ご自身のプライベートな iCloud を通じてほかのデバイスとも同期されます。このデータは Apple によりお客様の Apple アカウントに保存され、開発者が見ることはできません。グループまたはアプリを削除すると削除されます。</p>
+    </section>
+
+    <section>
+      <h2>メッセージの送信</h2>
+      <p>メッセージとメールは Apple 標準のメッセージ／メール画面で作成・送信されます。SendEveryone が入力内容を読み取ったり保存したりすることはありません。</p>
+    </section>
+
+    <section>
+      <h2>データの収集</h2>
+      <p>SendEveryone はデータを<strong>一切</strong>収集しません。分析、トラッキング、広告、サードパーティ SDK はありません。</p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>本ポリシーに関するご質問は <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a> までお送りください。</p>
+    </section>
+  </div>
+
+  <p class="last-updated">Last updated: November 22, 2026</p>
 </div>
 
 <script>
+const LANGS = ['en', 'hans', 'hant', 'ja'];
+const HTML_LANG = { en: 'en', hans: 'zh-Hans', hant: 'zh-Hant', ja: 'ja' };
 function switchLang(lang) {
-  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
-  document.getElementById('zh').style.display = lang === 'zh' ? 'block' : 'none';
-  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.lang-toggle button:nth-child(${lang === 'en' ? 1 : 2})`).classList.add('active');
+  for (const l of LANGS) {
+    document.getElementById('lang-' + l).style.display = l === lang ? 'block' : 'none';
+    document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+  }
+  document.documentElement.lang = HTML_LANG[lang];
 }
+function pickLang(nav) {
+  nav = (nav || '').toLowerCase();
+  if (nav.startsWith('zh')) return /hant|tw|hk|mo/.test(nav) ? 'hant' : 'hans';
+  if (nav.startsWith('ja')) return 'ja';
+  return 'en';
+}
+const initial = pickLang(navigator.language);
+if (initial !== 'en') switchLang(initial);
 </script>
 </body>
 </html>
