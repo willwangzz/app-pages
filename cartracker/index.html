@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OdoSnap 里程拍拍 — Support</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header img {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin-top: 8px;
+    color: #6e6e73;
+    font-size: 0.95rem;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-toggle button {
+    padding: 8px 20px;
+    border: 1.5px solid #d2d2d7;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .lang-toggle button.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
+  .lang-toggle button:hover:not(.active) {
+    border-color: #1d1d1f;
+  }
+  section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  section p, section ul {
+    color: #424245;
+    font-size: 0.95rem;
+  }
+  section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  section ul li {
+    margin-bottom: 6px;
+  }
+  .highlight {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 12px;
+  }
+  .highlight p {
+    color: #166534;
+    font-weight: 500;
+  }
+  footer {
+    text-align: center;
+    color: #86868b;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+  footer a {
+    color: #6e6e73;
+  }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <img src="icon.png" alt="OdoSnap icon">
+    <h1>OdoSnap 里程拍拍</h1>
+    <p id="subtitle-en">Mileage logbook &amp; trip tracker</p>
+    <p id="subtitle-zh" class="hidden">行车日志 · 拍照识别里程表</p>
+  </header>
+
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+    <button id="btn-zh" onclick="switchLang('zh')">中文</button>
+  </div>
+
+  <!-- English -->
+  <div id="lang-en">
+    <section>
+      <h2>What it does</h2>
+      <p>OdoSnap keeps a vehicle logbook for New Zealand (90-day) and Australia (12-week). Take a photo of the odometer, check the reading the app suggests, and save. Readings become trips, and Reports shows your business-use percentage and exports a PDF logbook or CSV.</p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Questions, feedback or a reading the app got wrong? Email <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>. Please include your iPhone model and iOS version.</p>
+    </section>
+
+    <section>
+      <h2>Common questions</h2>
+      <ul>
+        <li><strong>The reading is wrong</strong> — tap the number to fix it, or type it in. OdoSnap suggests a reading; you always confirm it before saving.</li>
+        <li><strong>Restore my subscription</strong> — Settings › Subscription › Restore Purchases, signed in with the Apple Account you subscribed with.</li>
+        <li><strong>Cancel or change my plan</strong> — Settings › Subscription › Manage Subscription, or iPhone Settings › your name › Subscriptions.</li>
+        <li><strong>My records on a new iPhone</strong> — sign in to the same iCloud account and turn on iCloud for OdoSnap. Records sync from your own iCloud; the first sync can take a few minutes.</li>
+        <li><strong>Keep a copy</strong> — Settings › Data › Data management lets you export all records as CSV, or make a full backup file you can restore later.</li>
+        <li><strong>Does OdoSnap tell me what I can claim?</strong> — No. It helps you keep the records; check with your accountant about what you can claim.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <div class="highlight">
+        <p>Odometer photos and readings stay on your devices and in your own iCloud. No account, no sign-in. Anonymous recognition statistics are optional and off by default.</p>
+      </div>
+      <p style="margin-top: 12px;">Read the full <a href="privacy-policy.html">Privacy Policy</a> and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>.</p>
+    </section>
+
+    <section>
+      <p>OdoSnap is not affiliated with or endorsed by Inland Revenue or the Australian Taxation Office. It is not tax advice.</p>
+    </section>
+  </div>
+
+  <!-- 中文 -->
+  <div id="lang-zh" class="hidden">
+    <section>
+      <h2>它能做什么</h2>
+      <p>里程拍拍帮你记新西兰（90 天）和澳洲（12 周）的车辆日志。拍一下里程表，看一眼 App 读出来的数字，没问题就保存。读数会连成行程，「报告」里能看公务使用比例，并导出 PDF 日志或 CSV 表格。</p>
+    </section>
+
+    <section>
+      <h2>支持</h2>
+      <p>有问题、建议，或者遇到读错的情况，请发邮件到 <a href="mailto:zongzheng_app@icloud.com">zongzheng_app@icloud.com</a>，最好写上你的 iPhone 型号和 iOS 版本。</p>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <ul>
+        <li><strong>读数不对</strong> — 点一下数字就能改，也可以直接手动输入。里程拍拍只是给出建议读数，保存前都由你确认。</li>
+        <li><strong>恢复订阅</strong> — 设置 › 订阅 › 恢复购买。要登录当初订阅用的 Apple 账户。</li>
+        <li><strong>取消或更换方案</strong> — 设置 › 订阅 › 管理订阅，或者在 iPhone 的「设置 › 你的名字 › 订阅」里操作。</li>
+        <li><strong>换新 iPhone 后记录还在吗</strong> — 登录同一个 iCloud 账户，并为里程拍拍打开 iCloud。记录从你自己的 iCloud 同步过来，第一次可能要等几分钟。</li>
+        <li><strong>想留一份备份</strong> — 设置 › 数据 › 数据管理，可以把全部记录导出成 CSV，或者做一份完整备份，以后可以恢复。</li>
+        <li><strong>里程拍拍会告诉我能抵扣什么吗</strong> — 不会。它只帮你把记录记好，能抵扣哪些请咨询你的会计。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>隐私</h2>
+      <div class="highlight">
+        <p>里程表照片和读数只存在你的设备和你自己的 iCloud 里。不用注册，不用登录。匿名识别统计是可选的，默认关闭。</p>
+      </div>
+      <p style="margin-top: 12px;">查看完整的<a href="privacy-policy.html">隐私政策</a>和<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款（EULA）</a>。</p>
+    </section>
+
+    <section>
+      <p>里程拍拍与新西兰税务局（Inland Revenue）和澳大利亚税务局（ATO）没有任何关联，也未获其认可，不构成税务建议。</p>
+    </section>
+  </div>
+
+  <footer>
+    <p><a href="privacy-policy.html">Privacy Policy · 隐私政策</a></p>
+    <p style="margin-top: 4px;">&copy; 2026 Zongzheng Wang</p>
+  </footer>
+</div>
+
+<script>
+function switchLang(lang) {
+  const en = lang === 'en';
+  document.getElementById('lang-en').classList.toggle('hidden', !en);
+  document.getElementById('lang-zh').classList.toggle('hidden', en);
+  document.getElementById('subtitle-en').classList.toggle('hidden', !en);
+  document.getElementById('subtitle-zh').classList.toggle('hidden', en);
+  document.getElementById('btn-en').classList.toggle('active', en);
+  document.getElementById('btn-zh').classList.toggle('active', !en);
+  document.documentElement.lang = en ? 'en' : 'zh-Hans';
+}
+if ((navigator.language || '').toLowerCase().startsWith('zh')) switchLang('zh');
+</script>
+
+</body>
+</html>
